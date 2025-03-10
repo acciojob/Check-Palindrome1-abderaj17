@@ -1,13 +1,12 @@
-// complete the given function
+function palindrome(str) {
+    // Remove non-alphanumeric characters and convert to lowercase
+    let cleanStr = str.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+    
+    // Reverse the cleaned string
+    let reversedStr = cleanStr.split("").reverse().join("");
 
-function palindrome(str){
-	let reversedWord = "";
- for(let i = str.length-1; i >= 0; i--){
-	 reversedWord += str[i];
- }
-	if(reversedWord == str){
-		return true;
-	}
-	return false;
+    // Compare the original cleaned string with the reversed one
+    return cleanStr === reversedStr;
 }
-module.exports = palindrome
+
+module.exports = palindrome;
