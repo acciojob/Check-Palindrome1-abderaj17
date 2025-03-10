@@ -2,7 +2,7 @@
 
 function palindrome(str){
 	let reversedWord = "";
- for(let i = str.length; i > 0; i--){
+ for(let i = str.length-1; i >= 0; i--){
 	 reversedWord += str[i];
  }
 	if(reversedWord == str){
